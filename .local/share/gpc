@@ -5,11 +5,8 @@ do
 
 	CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
 	STATUS=$(cat /sys/class/power_supply/BAT0/status)
-	LID_STATUS=$(cat /proc/acpi/button/lid/LID0/state)
 
-	if [ "$STATUS" = "Charging" ]; then
-	    exit
-	fi
+    [ "$STATUS" = "Charging" ] && exit
 
 	if (($CHARGE < 15)) ; then
 	    notify-send -u critical "Low Battery"
