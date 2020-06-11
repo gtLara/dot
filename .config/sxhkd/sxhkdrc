@@ -1,0 +1,11 @@
+ctrl + v ; {u,d,m,t}
+    gac {up,down,mute,unmute}
+
+alt + b
+    headset
+
+ctrl + k ; {p,i}
+    setxkbmap -layout {br, us -option caps:escape} 
+
+ctrl + s ; {l, u, d, U, D, s, o}
+    {slock, gbc up, gbc down, gbc upp, gbc downn, systemctl suspend, poweroff}

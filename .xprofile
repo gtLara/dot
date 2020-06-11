@@ -1,0 +1,27 @@
+#Profile File
+
+#Default programs
+
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="brave"
+export READER="zathura"
+export NTFS="/mnt/ntfs/"
+export SHELL="zsh"
+export CACA_DRIVER="ncurses"
+
+#Confy ~ spring clean up
+
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$HOME/.config/zsh"
+
+
+#Key Stuff
+
+setxkbmap -layout us -option caps:escape
+xset r rate 300 50
+
+#Paths
+
+PATH="$PATH:~/.local/share/";export PATH
