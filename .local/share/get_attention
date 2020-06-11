@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "$1" in
+    56) HOST="omnilogic@150.164.32.56" ;; 
+    60) HOST="gabriel-lara@150.164.32.60" ;;
+    61) HOST="grupo-omnilogic@150.164.32.61" ;;
+esac
+
+SCRIPT="ls -v $2/checkpoints/$3/attention/ | tail -n 1"
+DIR=$(echo $SCRIPT | cut -d' ' -f3)
+
+image=$(ssh $HOST "$SCRIPT")
+
+scp $HOST:$DIR$image ~/

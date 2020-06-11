@@ -1,0 +1,14 @@
+#!/bin/sh
+
+current=$(</sys/class/backlight/intel_backlight/brightness)
+
+case "$1" in
+    upp) upvalue=1500 ;;
+    up) upvalue=750 ;;
+    downn) upvalue=-1500 ;;
+    down) upvalue=-750 ;;
+esac
+
+new=`expr $current + $upvalue`
+
+sudo echo $new > /sys/class/backlight/intel_backlight/brightness

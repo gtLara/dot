@@ -1,0 +1,18 @@
+#!/bin/sh
+
+NUM="${2:-8}"
+
+unmute() { amixer sset Master 100%+ ;}
+mute() { amixer sset Master 100%- ;}
+up() { amixer sset Master "$NUM"%+ ;}
+down() { amixer sset Master "$NUM"%- ;}
+
+case "$1" in
+	unmute) unmute ;;
+        mute) mute ;;
+        up) up ;;
+        down) down ;;
+
+esac > /dev/null
+
+~/.suckless/dwm-bar/dwm_bar.sh > /dev/null

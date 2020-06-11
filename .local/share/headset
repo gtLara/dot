@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sleep 1 
+
+echo -e "power on\ndefault-agent\nconnect \t \nquit" | bluetoothctl > /dev/null
+
+sleep 2
+
+echo -e "power on\ndefault-agent\nconnect \t \nquit" | bluetoothctl > /dev/null
