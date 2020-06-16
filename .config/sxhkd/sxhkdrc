@@ -1,5 +1,5 @@
-ctrl + v ; {u,d,m,t}
-    gac {up,down,mute,unmute}
+ctrl + v ; {u,d,m,t,U, D}
+    gac {up,down,mute,unmute,up 16, down 16}
 
 alt + b
     headset
