@@ -7,5 +7,5 @@ alt + b
 ctrl + k ; {p,i}
     setxkbmap -layout {br, us -option caps:escape} 
 
-ctrl + s ; {l, u, d, U, D, s, o}
-    {slock, gbc up, gbc down, gbc upp, gbc downn, systemctl suspend, poweroff}
+ctrl + s ; {l, u, d, U, D, m, o}
+    {slock, gbc up, gbc down, gbc upp, gbc downn, gbc max, poweroff} 
