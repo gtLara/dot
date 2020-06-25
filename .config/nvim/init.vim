@@ -28,8 +28,7 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-let mapleader = "-"
-map I :! pdflatex %<CR>
+map CM :! pdflatex %<CR>
 map S :! zathura $(echo % \| sed "s/tex$/pdf/g") & disown<CR>
 
 inoremap " ""<left>
@@ -39,16 +38,19 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-inoremap <Leader><Leader> <Esc>/<++><Enter>"_c4l
+inoremap -- <Esc>/<++><Enter>"_c4l
+inoremap ;m <++>
 
 " Latex snippets
 
 augroup latex
     autocmd!
-    autocmd Filetype tex inoremap $ $$<left>
     autocmd VimEnter *.tex set spell spelllang=pt_br
-    autocmd Filetype tex inoremap ;env \begin{<Esc>o<++><CR>\end{<Esc>vh<C-n>a
-    autocmd Filetype tex inoremap ;test \begin{}<Esc>o<++><CR><BS>\end{}<Esc>vh
+    autocmd Filetype tex inoremap $ $$<left>
+    autocmd Filetype tex inoremap ;env \begin{-<Esc>o<++><CR><BS>\end{-<Esc>vh
+    autocmd Filetype tex inoremap ;doc \begin{document}<CR><++><CR>\end{document}
+    autocmd Filetype tex inoremap ;fig \begin{figure}<CR>\centering<CR>\includegraphics{<++>}<CR>\caption{<++>}<CR>\label{fig:<++>}<CR><BS>\end{figure}
+    autocmd Filetype tex inoremap ;p \usepackage{}<left>
 augroup end
 
 let g:lightline = {
