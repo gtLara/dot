@@ -1,9 +1,5 @@
 #!/bin/sh
 
-#Terminal consistency
-
-alias st="st & disown"
-
 #Vim stuff
 
 alias vim="nvim"
@@ -13,8 +9,10 @@ alias vimdiff="nvim -d"
 #Git stuff
 
 alias gs="git status"
-alias gc="git commit"
+alias gsu="git status -uno"
+alias gc="git commit -m"
 alias gp="git push"
+alias ga="git add"
 
 #SSH
 
@@ -49,14 +47,11 @@ alias \
 
 alias \
 	ka="killall" \
-	g="git" \
 	s="ddgr" \
 	p="sudo pacman" \
     thm="wal -i" \
     see="sxiv" \
     mail="neomutt" \
-    wlist="nmcli device wifi list" \
-    wconnect="ncmli device wifi connect"
 
 #Disk/USB handling
 
