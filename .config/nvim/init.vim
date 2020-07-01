@@ -54,9 +54,9 @@ augroup latex
     autocmd Filetype tex inoremap ;fig \begin{figure}<CR>\centering<CR>\includegraphics{<++>}<CR>\caption{<++>}<CR>\label{fig:<++>}<CR><BS>\end{figure}
     autocmd Filetype tex inoremap ;p \usepackage{}<left>
     autocmd Filetype tex inoremap ] \
-    autocmd Filetype tex inoremap ;s \section
-    autocmd Filetype tex inoremap ;ss \subsection
-    autocmd Filetype tex inoremap ;sss \subsubsection
+    autocmd Filetype tex inoremap ;s \section{}<left>
+    autocmd Filetype tex inoremap ;ss \subsection{}<left>
+    autocmd Filetype tex inoremap ;sss \subsubsection{}<left>
 
     " Above is a hacky way to delay personalized keymapping
 augroup end
@@ -72,7 +72,7 @@ let g:tex_flavor  = 'latex'
 let g:tex_conceal = ''
 let g:vimtex_fold_manual = 1
 let g:vimtex_latexmk_continuous = 1
-let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_compiler_progname = 'pdflatex'
 let g:vimtex_view_method = 'zathura'
 
 set t_Co=256
