@@ -28,8 +28,6 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-map CM :! pdflatex %<CR>
-map S :! zathura $(echo % \| sed "s/tex$/pdf/g") & disown<CR>
 
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -41,16 +39,26 @@ inoremap {;<CR> {<CR>};<ESC>O
 inoremap -- <Esc>/<++><Enter>"_c4l
 inoremap ;m <++>
 
-" Latex snippets
+" Latex stuff
 
 augroup latex
     autocmd!
     autocmd VimEnter *.tex set spell spelllang=pt_br
+    autocmd VimEnter *.tex set spellfile=$HOME/.config/nvim/spell/pt.utf-8.add
+    autocmd Filetype tex map CM :! pdflatex %<CR>
+    autocmd Filetype tex map BB :! bibtex $(echo % \| sed "s/.tex$//g") <CR>
+    autocmd Filetype tex map S :! zathura $(echo % \| sed "s/tex$/pdf/g") & disown<CR>
     autocmd Filetype tex inoremap $ $$<left>
     autocmd Filetype tex inoremap ;env \begin{-<Esc>o<++><CR><BS>\end{-<Esc>vh
     autocmd Filetype tex inoremap ;doc \begin{document}<CR><++><CR>\end{document}
     autocmd Filetype tex inoremap ;fig \begin{figure}<CR>\centering<CR>\includegraphics{<++>}<CR>\caption{<++>}<CR>\label{fig:<++>}<CR><BS>\end{figure}
     autocmd Filetype tex inoremap ;p \usepackage{}<left>
+    autocmd Filetype tex inoremap ] \
+    autocmd Filetype tex inoremap ;s \section
+    autocmd Filetype tex inoremap ;ss \subsection
+    autocmd Filetype tex inoremap ;sss \subsubsection
+
+    " Above is a hacky way to delay personalized keymapping
 augroup end
 
 let g:lightline = {
