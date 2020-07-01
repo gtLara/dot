@@ -1,12 +1,13 @@
 #Profile File
 
-#Default programs
+#Default programs and other variables   
 
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="brave"
 export READER="zathura"
 export NTFS="/mnt/ntfs/"
+export USB="/mnt/usb/"
 export SHELL="zsh"
 export CACA_DRIVER="ncurses"
 
