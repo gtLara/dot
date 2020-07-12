@@ -39,6 +39,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 inoremap -- <Esc>/<++><Enter>"_c4l
 inoremap ;m <++>
 
+autocmd VimLeave * !sed -i 's/[ \t]*$//' %
+
 " Latex stuff
 
 augroup latex
