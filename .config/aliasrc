@@ -29,6 +29,10 @@ alias \
 	rm="rm -vI" \
 	mkd="mkdir -pv" 
 
+#Latex
+
+alias \
+    texmin="cp $HOME/.config/latex/templates/minimal.tex ./" \
 
 #Conda 
 
