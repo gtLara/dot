@@ -27,7 +27,6 @@ alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	mkd="mkdir -pv" 
 
 #Latex
 
@@ -40,7 +39,6 @@ alias \
 	ca="conda activate" \
 	cdt="conda deactivate" 
 	
-
 #Color time
 
 alias \
@@ -56,6 +54,7 @@ alias \
     thm="wal -i" \
     see="sxiv" \
     mail="neomutt" \
+    rmw="sed -i 's/[ \t]*$//'" 
 
 #Disk/USB handling
 
