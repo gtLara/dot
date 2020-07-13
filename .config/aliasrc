@@ -32,8 +32,6 @@ alias \
 
 alias \
     texmin="cp $HOME/.config/latex/templates/minimal.tex ./" \
-    snote="export NOTES=$(pwd)/notes" \
-    xnote="xclip -o >> $NOTES" \
 
 #Conda
 
@@ -56,7 +54,11 @@ alias \
     thm="wal -i" \
     see="sxiv" \
     mail="neomutt" \
-    rmw="sed -i 's/[ \t]*$//'"
+    rmw="sed -i 's/[ \t]*$//'" \
+    hkeys="cat ~/.config/sxhkd/sxhkdrc" \
+    szs="source ~/.config/zsh/.zshrc" \
+    vzs="vim ~/.config/zsh/.zshrc" \
+    czs="cat ~/.config/zsh/.zshrc"
 
 #Disk/USB handling
 

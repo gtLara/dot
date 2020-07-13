@@ -1,6 +1,6 @@
 #Profile File
 
-#Default programs and other variables   
+#Default programs and other variables
 
 export EDITOR="nvim"
 export TERMINAL="st"

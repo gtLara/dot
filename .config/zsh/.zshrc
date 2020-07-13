@@ -51,11 +51,15 @@ fi
 unset __conda_setup
 
 # Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=[fg=magenta, bg=white] #not working, look@later
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^ ' autosuggest-accept
+
+# # # NOTES # # #
+
+export NOTES=/home/gala/literature/linguistics/saussure/notes
