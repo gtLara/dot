@@ -7,10 +7,11 @@ alt + t
 alt + b
     headset
 
-alt + {p, i} 
-    setxkbmap -layout {br -option caps:escape, us -option caps:escape} 
+alt + {p, i}
+    setxkbmap -layout {br -option caps:escape, us -option caps:escape}
 
 ctrl + s ; {l, u, d, U, D, m, o, i}
     {slock, gbc up, gbc down, gbc upp, gbc downn, gbc max, poweroff, xcalib -invert -alter}
 
-
+alt + n ; {s, p}
+    export NOTES=$(pwd)/notes, xclip -o >> $NOTES

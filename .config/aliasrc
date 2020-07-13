@@ -28,17 +28,19 @@ alias \
 	mv="mv -iv" \
 	rm="rm -vI" \
 
-#Latex
+#Latex and notetaking
 
 alias \
     texmin="cp $HOME/.config/latex/templates/minimal.tex ./" \
+    snote="export NOTES=$(pwd)/notes" \
+    xnote="xclip -o >> $NOTES" \
 
-#Conda 
+#Conda
 
 alias \
 	ca="conda activate" \
-	cdt="conda deactivate" 
-	
+	cdt="conda deactivate"
+
 #Color time
 
 alias \
@@ -54,7 +56,7 @@ alias \
     thm="wal -i" \
     see="sxiv" \
     mail="neomutt" \
-    rmw="sed -i 's/[ \t]*$//'" 
+    rmw="sed -i 's/[ \t]*$//'"
 
 #Disk/USB handling
 
