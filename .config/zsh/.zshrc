@@ -62,4 +62,4 @@ bindkey '^ ' autosuggest-accept
 
 # # # NOTES # # #
 
-export NOTES=/home/gala/literature/linguistics/saussure/notes
+export NOTES=hahahaha
