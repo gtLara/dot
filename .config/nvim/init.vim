@@ -6,6 +6,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -28,18 +29,30 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" Remaps
+vnoremap Y "+Y
+noremap ;j :tabprev<CR>
+noremap ;k :tabnext<CR>
+inoremap ;" ""<left>
+inoremap ;' ''<left>
+inoremap ;( ()<left>
+inoremap ;[ []<left>
+inoremap ;{ {}<left>
+inoremap ;{<CR> {<CR>}<ESC>O
+inoremap ;{;<CR> {<CR>};<ESC>O
 inoremap -- <Esc>/<++><Enter>"_c4l
 inoremap ;m <++>
 
+" Macros
+
 autocmd VimLeave * !sed -i 's/[ \t]*$//' %
+
+" Não tá funcionando :((
+
+augroup py
+    autocmd!
+    autocmd Filetype py map == :!python %<CR>
+augroup end
 
 " Latex stuff
 
