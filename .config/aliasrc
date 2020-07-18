@@ -13,6 +13,8 @@ alias gsu="git status -uno"
 alias gc="git commit -m"
 alias gp="git push"
 alias ga="git add"
+alias gd="git diff"
+alias gl="git log"
 alias gga="git status -uno | grep modified | sed \"s/modified:   //g\" | xargs git add" # stages all changes quickly
 
 #SSH
@@ -59,7 +61,8 @@ alias \
     hkeys="cat ~/.config/sxhkd/sxhkdrc" \
     szs="source ~/.config/zsh/.zshrc" \
     vzs="vim ~/.config/zsh/.zshrc" \
-    czs="cat ~/.config/zsh/.zshrc"
+    czs="cat ~/.config/zsh/.zshrc" \
+    ipy="ipython --TerminalInteractiveShell.editing_mode=vi"
 
 #Disk/USB handling
 
