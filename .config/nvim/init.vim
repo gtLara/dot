@@ -74,6 +74,7 @@ augroup latex
     autocmd Filetype tex inoremap ;sss \subsubsection{}<left>
     autocmd Filetype tex inoremap ;i \italic{}<left>
     autocmd Filetype tex inoremap ;b \bold{}<left>
+    autocmd Filetype tex vnoremap ;c \color{red}<Esc>}kA\color{black}
 
     " Above is a hacky way to delay personalized keymapping
 augroup end
