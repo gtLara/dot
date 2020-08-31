@@ -20,9 +20,10 @@ alias gga="git status -uno | grep modified | sed \"s/modified:   //g\" | xargs g
 #SSH
 
 alias \
-	litc56="ssh omnilogic@150.164.32.56" \
+	litc56="ssh gabriel-lara@150.164.32.56" \
     litc60="ssh gabriel-lara@150.164.32.60" \
-    litc61="ssh grupo-omnilogic@150.164.32.61"
+    litc61="ssh grupo-omnilogic@150.164.32.61" \
+    litc57="ssh gabriel_lara@150.164.32.57" \
 
 #Verbosity and safety
 
@@ -35,6 +36,7 @@ alias \
 
 alias \
     texmin="cp $HOME/.config/latex/templates/minimal.tex ./" \
+    texport="cp $HOME/.config/latex/templates/report.tex ./" \
 
 #Conda
 
@@ -51,6 +53,8 @@ alias \
 #Long stuff
 
 alias \
+    z="zathura" \
+    mh="sxiv $HOME/university/2020-01/meta-horarios.png" \
 	ka="killall" \
 	s="ddgr" \
 	p="sudo pacman" \
