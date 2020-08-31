@@ -68,13 +68,14 @@ augroup latex
     autocmd Filetype tex inoremap ;doc \begin{document}<CR><++><CR>\end{document}
     autocmd Filetype tex inoremap ;fig \begin{figure}<CR>\centering<CR>\includegraphics{<++>}<CR>\caption{<++>}<CR>\label{fig:<++>}<CR><BS>\end{figure}
     autocmd Filetype tex inoremap ;p \usepackage{}<left>
-    autocmd Filetype tex inoremap ;eq \begin{equation}<CR><++><CR>\end{equation}
+    autocmd Filetype tex inoremap ;eq \begin{equation}\label{<++>}<CR><++><CR>\end{equation}
+    autocmd Filetype tex inoremap ;frac \frac{<++>}{<++>}
     autocmd Filetype tex inoremap ] \
     autocmd Filetype tex inoremap ;s \section{}<left>
     autocmd Filetype tex inoremap ;ss \subsection{}<left>
     autocmd Filetype tex inoremap ;sss \subsubsection{}<left>
     autocmd Filetype tex inoremap ;i \emph{}<left>
-    autocmd Filetype tex inoremap ;b \bold{}<left>
+    autocmd Filetype tex inoremap ;b \textbf{}<left>
     autocmd Filetype tex inoremap ;r \ref{}<left>
     autocmd Filetype tex inoremap ;c \cite{}<left>
     autocmd Filetype tex vnoremap ;vr \color{red}<Esc>}kA\color{black}
