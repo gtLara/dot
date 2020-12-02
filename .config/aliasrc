@@ -53,8 +53,9 @@ alias \
 #Long stuff
 
 alias \
+    hdmi="xrandr --outputs HDMI-1 --mode 1920x1080i" \
     z="zathura" \
-    mh="sxiv $HOME/university/2020-01/meta-horarios.png" \
+    crono="sxiv $HOME/university/2020-2/crono.png" \
 	ka="killall" \
 	s="ddgr" \
 	p="sudo pacman" \
