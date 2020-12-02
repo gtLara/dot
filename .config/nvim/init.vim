@@ -35,11 +35,11 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 vnoremap Y "+Y
 noremap ;j :tabprev<CR>
 noremap ;k :tabnext<CR>
-inoremap ;" ""<left>
-inoremap ;' ''<left>
-inoremap ;( ()<left>
-inoremap ;[ []<left>
-inoremap ;{ {}<left>
+inoremap "" ""<left>
+inoremap '' ''<left>
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
 inoremap ;{<CR> {<CR>}<ESC>O
 inoremap ;{;<CR> {<CR>};<ESC>O
 inoremap -- <Esc>/<++><Enter>"_c4l
