@@ -1,5 +1,7 @@
 call plug#begin('~/local/share/nvim/plugged')
 
+Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'davidhalter/jedi-vim'
@@ -54,6 +56,12 @@ augroup py
     autocmd Filetype py map == :!python %<CR>
 augroup end
 
+augroup cplus
+    autocmd!
+    autocmd Filetype cpp inoremap ;l for(int i=0; i < <++> ; i++){<Esc>o<++><Esc>o}
+    autocmd Filetype cpp inoremap ;dl for(int i=0; i < <++> ; i++){<Esc>ofor(int j=0; j < <++> ; j++){<Esc>o<++><Esc>o}<BS>}<Esc>o<BS>}
+augroup end
+
 " Latex stuff
 
 augroup latex
@@ -80,7 +88,6 @@ augroup latex
     autocmd Filetype tex inoremap ;c \cite{}<left>
     autocmd Filetype tex vnoremap ;vr \color{red}<Esc>}kA\color{black}
 
-    " Above is a hacky way to delay personalized keymapping
 augroup end
 
 let g:lightline = {
@@ -96,5 +103,6 @@ let g:vimtex_fold_manual = 1
 let g:vimtex_latexmk_continuous = 1
 let g:vimtex_compiler_progname = 'pdflatex'
 let g:vimtex_view_method = 'zathura'
+let g:syntastic_cpp_checker = ['gcc']
 
 set t_Co=256
