@@ -1,26 +1,27 @@
 #!/bin/sh
 
 #Vim stuff
-
-alias vim="nvim"
-alias svim="sudo nvim"
-alias vimdiff="nvim -d"
+alias \
+    vim="nvim" \
+    svim="sudo nvim" \
+    vimdiff="nvim -d"
 
 #Git stuff
 
-alias gs="git status"
-alias gsu="git status -uno"
-alias gc="git commit -m"
-alias gp="git push"
-alias ga="git add"
-alias gd="git diff"
-alias gl="git log"
-alias gga="git status -uno | grep modified | sed \"s/modified:   //g\" | xargs git add" # stages all changes quickly
+alias \
+    gs="git status" \
+    gsu="git status -uno" \
+    gc="git commit -m" \
+    gp="git push" \
+    ga="git add" \
+    gd="git diff" \
+    gl="git log" \
+    gga="git status -uno | grep modified | sed \"s/modified:   //g\" | xargs git add" # stages all changes quickly
 
 #SSH
 
 alias \
-	litc56="ssh gabriel-lara@150.164.32.56" \
+    litc56="ssh gabriel-lara@150.164.32.56" \
     litc60="ssh gabriel-lara@150.164.32.60" \
     litc61="ssh grupo-omnilogic@150.164.32.61" \
     litc57="ssh gabriel_lara@150.164.32.57" \
@@ -36,7 +37,7 @@ alias \
 
 alias \
     texmin="cp $HOME/.config/latex/templates/minimal.tex ./" \
-    texport="cp $HOME/.config/latex/templates/report.tex ./" \
+    texport="cp $HOME/.config/latex/templates/report.tex ./"
 
 #Conda
 
@@ -53,7 +54,8 @@ alias \
 #Long stuff
 
 alias \
-    hdmi="xrandr --outputs HDMI-1 --mode 1920x1080i" \
+    hg="history | grep" \
+    hdmi="xrandr --output HDMI-1 --mode 1920x1080i" \
     z="zathura" \
     crono="sxiv $HOME/university/2020-2/crono.png" \
 	ka="killall" \
@@ -64,6 +66,7 @@ alias \
     mail="neomutt" \
     rmw="sed -i 's/[ \t]*$//'" \
     hkeys="cat ~/.config/sxhkd/sxhkdrc" \
+    sa="source ~/.config/aliasrc"
     szs="source ~/.config/zsh/.zshrc" \
     vzs="vim ~/.config/zsh/.zshrc" \
     czs="cat ~/.config/zsh/.zshrc" \
