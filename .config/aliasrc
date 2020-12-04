@@ -54,6 +54,7 @@ alias \
 #Long stuff
 
 alias \
+    cuni="cd ~/university/2020-2/" \
     hg="history | grep" \
     hdmi="xrandr --output HDMI-1 --mode 1920x1080i" \
     z="zathura" \
