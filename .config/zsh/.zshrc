@@ -36,6 +36,10 @@ bindkey -M menuselect 'l' vi-forward-char
 
 PATH="$PATH:$HOME/.local/share/"
 
+# Conda include
+
+export PATH="/home/gala/.config/miniconda/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/gala/.installs/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -59,7 +63,3 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=[fg=magenta, bg=white] #not working, lo
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^ ' autosuggest-accept
-
-# # # NOTES # # #
-
-export NOTES=hahahaha
