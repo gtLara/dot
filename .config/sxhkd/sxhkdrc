@@ -1,14 +1,29 @@
-alt + v ; {u,d,m,t,U, D}
-    gac {up,down,mute,unmute,up 16, down 16}
+F6
+	gac up
 
-alt + t
-    notify-send $(date "+%T" | awk -F: '{print $1":"$2}')
+F5
+	gac down
 
-alt + b
-    headset
+F7
+	gac toggle
+
+F1
+	gbc down
+
+F2
+	gbc up
+
+F3
+    notify-send $(date "+%R")
 
 alt + {p, i}
     setxkbmap -layout {br -option caps:escape, us -option caps:escape}
 
-ctrl + s ; {l, u, d, U, D, m, o, i}
-    {slock, gbc up, gbc down, gbc upp, gbc downn, gbc max, poweroff, xcalib -invert -alter}
+# alt + b
+#     headset
+
+# alt + v ; {u,d,m,t,U, D}
+#     gac {up,down,mute,unmute,up 16,down 16}
+
+# ctrl + s ; {l, u, d, U, D, m, o, i}
+#     {slock, gbc up, gbc down, gbc upp, gbc downn, gbc max, poweroff, xcalib -invert -alter}
