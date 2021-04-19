@@ -4,8 +4,9 @@ zsh &
 gpc &
 unclutter --timeout 3 &
 dunst &
-xcompmgr &
 sxhkd &
+redshift &
+xcompmgr &
 . ~/.xprofile
 ~/.suckless/dwm-bar/dwm_bar.sh &
 xwallpaper --zoom media/pictures/monos-0.png &
